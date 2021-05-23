@@ -1,0 +1,21 @@
+
+// Color Palettes
+$yellow: #FFE600;
+$blue-ligth: #3483fa;
+$gray-100: #eeeeee;
+$gray-300: #999999;
+$gray-600: #666666;
+$gray-800: #333333;
+
+// spacers
+
+$spacer-small: 8px;
+$spacer-medium: 16px;
+$spacer-large: 32px;
+
+
+@mixin grid($columns) {
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+    grid-column-gap: 16;
+}

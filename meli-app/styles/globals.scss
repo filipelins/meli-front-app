@@ -1,0 +1,12 @@
+@import './tokens.scss';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $gray-100;
+  font-family: Arial,Helvetica,sans-serif;
+}

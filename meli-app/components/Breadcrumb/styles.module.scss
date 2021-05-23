@@ -1,0 +1,53 @@
+@import './styles/tokens.scss';
+
+.container {
+    @include grid(12);
+    min-width: 360px;
+    padding: $spacer-medium $spacer-large  $spacer-medium $spacer-large ;
+
+    .breadCrumb {
+        
+        display: flex;
+        justify-content: center;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        margin-left: 42px;
+
+        .breadCrumbItem{
+            font-size: 16px;
+            color: $gray-300;
+            
+            &:not(:last-child)::after{
+                content: '>';
+                margin-left: $spacer-small;
+                margin-right: $spacer-small;
+            }
+            
+            &:last-child {
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: $spacer-small;
+
+        .breadCrumb{
+            grid-column: 1;
+            margin-left: $spacer-small;
+        }
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .headerContainer {
+        padding: $spacer-small 1 $spacer-small 1 ;
+        .searchContainer {
+            grid-column-start: 2;
+            grid-column-end: 5;
+        }
+    }
+}

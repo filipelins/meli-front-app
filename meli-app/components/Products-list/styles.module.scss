@@ -3,53 +3,20 @@
 .listContainer {
     @include grid(12);
     min-width: 360px;
-    background-color: $yellow;
-    padding: $spacer-small  $spacer-large  $spacer-small $spacer-large;
-    
-    .logoContainer {
-        display: flex;
-        grid-column: 2;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .searchContainer {
-        display: flex;
-        align-items: center;
-        grid-column-start: 3;
-        grid-column-end: 12;
+    padding: $spacer-small $spacer-large $spacer-small $spacer-large;
 
-        input {
-            flex-grow: 1;
-            border: none;
-            font-size: 18px;
-            color: $gray-800;
-            display: inline-block;
-            box-sizing: border-box;
-            border-radius: 4px 0 0 4px;       
-            padding: $spacer-small $spacer-medium;
-    
-            ::placeholder {
-                color: $gray-300
-            }
-        }
-    
-        input:focus {
-            outline: none;
-        }
-    
-        .searchIcon{
-            display: flex;
-            padding: $spacer-small;
-            cursor: pointer;
-            background-color:  $gray-100;
-        }
+    .container {
+        border-radius: 2px;
+        grid-column-end: 12;
+        grid-column-start: 2;
+        padding: $spacer-medium;
+        background-color: $white;
     }
 }
 
 
 @media screen and (max-width: 768px) {
-    .headerContainer {
+    .listContainer {
         padding: $spacer-small;
 
         .logoContainer{

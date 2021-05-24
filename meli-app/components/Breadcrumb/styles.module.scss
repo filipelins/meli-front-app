@@ -3,7 +3,7 @@
 .container {
     @include grid(12);
     min-width: 360px;
-    padding: $spacer-medium $spacer-large  $spacer-medium $spacer-large ;
+    // padding: 50px $spacer-large  50px $spacer-large ;
 
     .breadCrumb {
         
@@ -36,11 +36,13 @@
         padding: $spacer-small;
 
         .breadCrumb{
-            grid-column: 1;
+            grid-column: 2;
             margin-left: $spacer-small;
         }
     }
 }
+
+
 
 @media screen and (max-width: 380px) {
     .headerContainer {

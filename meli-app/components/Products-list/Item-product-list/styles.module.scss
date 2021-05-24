@@ -1,0 +1,106 @@
+@import './styles/tokens.scss';
+
+.container {
+    // @include grid(12);
+    // display: flex;
+    // width: 1fr;
+    // // min-width: 360px;
+    // // padding: 0 $spacer-large 0 $spacer-large;
+    // // margin-top: 16px;
+    // // margin-bottom: 16px;
+    // gap: $spacer-medium;
+
+    // // outline: solid 1px yellowgreen;
+
+    // border-top: solid 1px $gray-300;
+    // border-bottom: solid 1px $gray-300;
+    // margin: 10px 0 12px 0;
+    // background-color: violet;
+
+
+    display: flex;
+    width: 1fr;
+    grid-gap: 16px;
+    gap: 16px;
+    border-top: solid 1px #999999;
+    border-bottom: solid 1px #999999;
+    margin: 10px 0 12px 0;
+    background-color: violet;
+    display: flex;
+    padding: 16px;
+
+    display: flex;
+
+    .thumb {
+        width: 180px;
+        height: 180px;
+        // overflow: hidden;
+        // object-fit: cover;
+        border-radius: 4px;
+        // margin-right: $spacer-medium;
+        // outline: solid 1px;
+
+        img {
+            width: 180px;
+            height: 180px;
+            object-fit: contain;
+        }
+
+    }
+
+    .details {
+        flex-grow: 1;
+        display: flex;
+        // outline: solid 1px red;
+        flex-direction: column;
+        color: $gray-800;
+
+        .infos {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            margin-top: $spacer-large;
+            margin-bottom: $spacer-large;
+            
+            .price {
+                flex-grow: 0.8;
+                font-size: 24px;
+            }
+
+            .locale { 
+                flex-grow: 0.15;
+                font-size: 12px;
+                color: $gray-300;
+                font-weight: bold;
+            }
+        }
+    
+        .title {
+            flex-grow: 1;
+            font-size: 18px;
+        }
+    }
+
+}
+
+
+@media screen and (max-width: 768px) {
+    .listContainer {
+        padding: $spacer-small;
+
+        .logoContainer{
+            grid-column: 1;
+        }
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .headerContainer {
+        padding: $spacer-small 1 $spacer-small 1 ;
+        .searchContainer {
+            grid-column-start: 2;
+            grid-column-end: 5;
+        }
+    }
+}

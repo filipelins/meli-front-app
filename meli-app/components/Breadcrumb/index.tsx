@@ -8,8 +8,8 @@ const Breadcrumb = (props: any) => {
         <section className={styles.container}>
             <div className={styles.breadCrumb}>
                 {
-                    categories.map((category: string) => (
-                        <div className={styles.breadCrumbItem}>{category}</div>
+                    categories.map((category: string, index: number) => (
+                        <div key={`bread-${index}`} className={styles.breadCrumbItem}>{category}</div>
                     ))
                 }
             </div>

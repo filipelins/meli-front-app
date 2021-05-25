@@ -16,7 +16,6 @@ export default function Home({products}:any) {
 
 export async function getServerSideProps(context: any) {
   
-
   const { search = '' } = context.query;
   let products:any = '';
 
@@ -26,8 +25,6 @@ export async function getServerSideProps(context: any) {
   } catch (error) {
     
   }
-
-  
   
   return {
     props: {

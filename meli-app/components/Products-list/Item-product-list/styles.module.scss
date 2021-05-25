@@ -2,13 +2,13 @@
 
 .container {
     // @include grid(12);
-    // display: flex;
-    // width: 1fr;
-    // // min-width: 360px;
-    // // padding: 0 $spacer-large 0 $spacer-large;
-    // // margin-top: 16px;
-    // // margin-bottom: 16px;
-    // gap: $spacer-medium;
+    display: flex;
+    width: 1fr;
+    // min-width: 360px;
+    // padding: 0 $spacer-large 0 $spacer-large;
+    // margin-top: 16px;
+    // margin-bottom: 16px;
+    gap: $spacer-medium;
 
     // // outline: solid 1px yellowgreen;
 
@@ -18,17 +18,12 @@
     // background-color: violet;
 
 
-    display: flex;
-    width: 1fr;
-    grid-gap: 16px;
-    gap: 16px;
-    border-top: solid 1px #999999;
-    border-bottom: solid 1px #999999;
-    margin: 10px 0 12px 0;
-    background-color: violet;
-    display: flex;
-    padding: 16px;
+    // border-top: solid 1px #999999;
+    border-bottom: solid 1px $gray-100;
+    // margin: 10px 0 12px 0;
+    padding: $spacer-medium 0 $spacer-medium ;
 
+    outline: solid 1px;
     display: flex;
 
     .thumb {

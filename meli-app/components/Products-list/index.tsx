@@ -1,20 +1,21 @@
+import { useEffect } from 'react';
+import { Card } from '../Card';
+import { useGenericContext } from '../Contexts/Context';
 import { ItemProductList } from './Item-product-list'
-import styles from './styles.module.scss'
 
-const ProductList = (props: any) => {
+const ProductList = ({products}: any) => {
+    const { hideLoader} = useGenericContext();
 
-    const { items } = props;
-
-    console.log(items);
-    
+    useEffect(()=>{
+        hideLoader();
+    }, [products])
 
     return(
-        <section className={styles.listContainer}>
-            <div className={styles.container}>
-                { items.map((item:any) => <ItemProductList product={item}/> ) }
-            </div>
-        </section>
+        <Card padding="medium" >
+            { products.map((item:any, index:number) => (
+                <ItemProductList key={`product-${index}`} product={item}/>)
+            )}
+        </Card>
     )
 }
-
 export { ProductList }

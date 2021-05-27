@@ -50,17 +50,8 @@ export class ProductListUseCase {
         return this.products;
     }
 
-    private getPicture = (thumbnail, pictures) => {
-        // Obtener primera imagen si está disponible, sino usar thumbnail
-        // Parsear la url para obtener imagen de mejor calidad y a través de https
-        const picture = pictures && pictures.length > 0 ? pictures[0].url : thumbnail;
-        return picture.replace("-I", "-O").replace("http", "https");
-    };
-
-    private setProduct({ id, title, price, currency_id, thumbnail, condition, shipping, pictures }) {
-        
-        //ToDo: implementar logica para discover locale
-        console.log(pictures);
+    //ToDo: Implementar uma inteligencia para retornar o localeString baseado em 'currency'
+    private setProduct({ id, title, price, currency_id, thumbnail, condition, shipping, address }) {
         const product: Product = {
             id,
             title,
@@ -71,7 +62,8 @@ export class ProductListUseCase {
             } ,
             condition,
             free_shipping: shipping?.free_shipping,
-            picture: this.getPicture(thumbnail, pictures)             
+            picture: thumbnail && thumbnail.replace("-I", "-O").replace("http", "https"),
+            state_name: address.state_name
         }
         return product
     }

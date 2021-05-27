@@ -3,97 +3,92 @@
 .headerContainer {
     @include grid(12);
     min-width: 360px;
-    background-color: $yellow;
-    padding: $spacer-small $spacer-large  $spacer-small $spacer-large;
-    
-    .logoContainer {
-        display: flex;
-        grid-column: 2;
-        align-items: center;
-    }
-    
-    .searchContainer {
+    padding: 0 $spacer-large;
+    background-color:  $yellow;
+
+    .container {
         display: flex;
         align-items: center;
-        grid-column-start: 3;
         grid-column-end: 12;
+        grid-column-start: 2;
+        padding: $spacer-small 0 ;
 
-        input {
-            flex-grow: 1;
-            border: none;
-            font-size: 18px;
-            color: $gray-800;
-            display: inline-block;
-            box-sizing: border-box;
-            border-radius: 4px 0 0 4px;       
-            padding: $spacer-small $spacer-medium;
-    
-            ::placeholder {
-                color: $gray-300
-            }
-        }
-    
-        input:focus {
-            outline: none;
-        }
-    
-        .searchIcon{
+        .searchBar {
             display: flex;
-            cursor: pointer;
-            height: 100%;
-            padding: $spacer-small;
-            background-color: $gray-100;
-            border-radius: 0 4px 4px 0;
+            width: 100%;
 
-            &hover {
-                background-color: $gray-300;
+            .logo {
+                flex-grow: 0.03;
             }
 
-            img {
-                width: 20px;
-            }
+            .search {
+                display: flex;
+                flex-grow: 1;
+                justify-content: flex-startW;
+
+                input {
+                    width: 100%;
+                    border: none;
+                    font-size: 18px;
+                    color: $gray-800;
+                    display: inline-block;
+                    box-sizing: border-box;
+                    border-radius: 4px 0 0 4px;       
+                    padding: $spacer-small $spacer-medium;
+            
+                    ::placeholder {
+                        color: $gray-300
+                    }
+
+                    &:focus {
+                        outline: none;
+                    }
+                    
+                }
+
+
+                .searchIcon {
+                    
+                    display: flex;
+                    cursor: pointer;
+                    height: 100%;
+                    padding: $spacer-small;
+                    background-color: $gray-100;
+                    border-radius: 0 4px 4px 0;
+        
+                    &hover {
+                        background-color: $gray-300;
+                    }
+        
+                    img {
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+            }   
         }
     }
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 620px) {
     .headerContainer {
-        padding: $spacer-small;
-
-        .logoContainer{
-            grid-column: 2;
-        }
-
-        .searchContainer {
-            grid-column-start: 4;
-            grid-column-end: 12;
-        }
+        padding: 0 $spacer-small;
     }
-}
 
-@media screen and (max-width: 468px) {
-    .headerContainer {
-        padding: $spacer-small 1 $spacer-small 1 ;
-        .logoContainer{
-            grid-column: 6;
-            display: inline-block;
-            margin-bottom: $spacer-small;
-        }
-
-        .searchContainer {
-            grid-column-start: 2;
-            grid-column-end: 12;
-        }
+    .searchBar {
+        flex-direction: column;
+        justify-content: center;
     }
-}
 
-@media screen and (max-width: 380px) {
-    .headerContainer {
-        padding: $spacer-small 1 $spacer-small 1 ;
-        .searchContainer {
-            grid-column-start: 2;
-            grid-column-end: 5;
-        }
+    .logo {
+        display: flex;
+        flex-grow: 1;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 16px;
+        margin-top: 16px;
+
+        transition: all 0.3s;
     }
 }

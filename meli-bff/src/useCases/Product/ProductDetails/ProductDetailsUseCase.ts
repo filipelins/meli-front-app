@@ -59,7 +59,7 @@ export class ProductDetailsUseCase {
 
         return {
             author: this.author,
-            items: this.product,
+            item: this.product,
         };
     }
 
@@ -74,7 +74,7 @@ export class ProductDetailsUseCase {
             } ,
             condition,
             free_shipping: shipping?.free_shipping,
-            picture: 'pictures',
+            picture: pictures,
             sold_quantity,
         }
     }

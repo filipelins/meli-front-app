@@ -1,0 +1,14 @@
+{
+  "name": "meli-front-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/cypress open "
+  },
+  "repository": "https://github.com/filipelins/meli-front-app.git",
+  "author": "filipe.vasconcelos <filipe.vasconcelos-ext@viavarejo.com.br>",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "4.1"
+  }
+}

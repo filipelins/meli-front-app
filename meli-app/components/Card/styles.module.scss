@@ -1,0 +1,32 @@
+@import './styles/tokens.scss';
+
+.card {
+    @include grid(12);
+    min-width: 360px;
+    padding: 0 $spacer-large 0 $spacer-large;
+    margin-bottom: $spacer-large;
+        
+    .container {
+        border-radius: 4px 4px 0 0;
+        grid-column-end: 12;
+        grid-column-start: 2;
+        
+        background-color: $white;
+
+        &.medium {
+            padding: $spacer-medium;
+        }
+
+        &.large {
+            padding: $spacer-large;
+        }
+    }
+
+}
+
+
+@media screen and (max-width: 768px) {
+    .card {
+        padding: 0 $spacer-small 0 $spacer-small;
+    }
+}

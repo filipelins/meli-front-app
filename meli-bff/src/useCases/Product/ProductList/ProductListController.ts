@@ -10,6 +10,7 @@ export class ProductListController {
     ){}
     
     async searchProduct( resquest: Request, response: Response) {
+
         const { productName } = resquest.query;
         
         if(!productName) {

@@ -1,0 +1,134 @@
+@import './styles/tokens.scss';
+
+ .product {
+
+    display: flex;
+    flex-direction: column;
+
+    .productDetail {
+        display: flex;
+        justify-content: space-between;
+
+        gap: 10px;
+
+        .preview {
+            width: 680px;
+            // max-width: 680px;
+
+            display: flex;
+            justify-content: center;
+            // object-fit: contain;
+            
+            img {
+                width: 100%;
+                max-width: 680px;
+                max-height: 680px;
+                object-fit: contain;
+            }
+         
+
+        }
+
+        .details {
+            display: flex;
+            flex-direction: column;
+   
+            .status {
+                color: $gray-300;
+                margin-top: $spacer-large;
+                margin-bottom: $spacer-medium;
+                span {
+                    font-size: 14px;
+                }    
+            }
+
+            .title {
+                font-size: 24px;
+                max-width: 300px;
+            }
+            
+            .price {
+                font-size: 46px;
+                margin: $spacer-medium 0;
+            }
+
+            .purchase {
+                margin-right: $spacer-large;
+
+                button {
+                    width: 100%;
+                    border: 0;
+                    color: $white;
+                    font-size: 16px;
+                    font-weight: 700;
+                    border-radius: 4px;
+                    padding: $spacer-medium;
+                    background-color: $blue-ligth;
+                }
+            }
+        }
+    }
+
+    .productDescription {
+        display: flex;
+        flex-direction: column;
+        margin-top: $spacer-medium;
+            
+
+        .label {
+            font-size: 28px;
+            margin-bottom: $spacer-large;
+        }
+
+        .description {
+            font-size: 16px;
+            color: $gray-300;
+            overflow: hidden;
+            max-width: 680px;
+            overflow-wrap: break-word;
+            white-space: break-spaces;
+        }
+
+    }
+}
+
+@media screen and (max-width: 910px) {
+    .product {
+        .productDetail {
+            flex-direction: column;
+            margin-bottom: $spacer-large;
+
+            .preview {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 692px) {
+    .product {
+        .productDetail {
+            .preview { 
+                img {
+                    width: 100%;
+                }
+            }            
+        }
+    }
+}
+
+@media screen and (max-width: 435px) {
+    .product {
+        .productDetail {
+            .details {
+                .title {
+                    font-size: 1rem;
+                }
+                .price {
+                    font-size: 2.25rem;
+                }
+            }
+            
+        }
+    }
+}

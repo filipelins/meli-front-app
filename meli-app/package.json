@@ -5,18 +5,27 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "test": "jest"
   },
   "dependencies": {
     "axios": "^0.21.1",
+    "keen-slider": "^5.4.1",
     "next": "10.2.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-image-gallery": "^1.0.9",
+    "react-loader-spinner": "^4.0.0",
+    "react-toastify": "^7.0.4",
     "sass": "^1.34.0"
   },
   "devDependencies": {
     "@types/axios": "^0.14.0",
     "@types/react": "17.0.6",
+    "@types/react-image-gallery": "^1.0.2",
+    "@types/react-loader-spinner": "^4.0.0",
+    "@types/react-toastify": "^4.1.0",
+    "jest": "^27.0.1",
     "typescript": "4.2.4"
   }
 }
